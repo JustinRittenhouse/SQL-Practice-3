@@ -49,9 +49,9 @@ add "time" time;
 
 insert into "payment" ("customer_id", "staff_id", "ticket_id", "amount", "time")
 values 
-(5, 1, 11, 13.00, current_timestamp),
-(5, 1, 12, 13.00, current_timestamp),
-(5, 1, 13, 13.00, current_timestamp),
+(4, 1, 11, 13.00, current_timestamp),
+(4, 1, 12, 13.00, current_timestamp),
+(4, 1, 13, 13.00, current_timestamp),
 (2, 1, 14, 13.00, current_timestamp),
 (3, 1, 15, 13.00, current_timestamp);
 
