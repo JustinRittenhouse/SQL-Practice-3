@@ -3,7 +3,7 @@ CREATE TABLE "customer" (
 	"first_name" varchar(255) NOT NULL,
 	"last_name" varchar(255),
 	"birthday" DATE NOT NULL,
-	"age" integer NOT NULL,
+	"age" integer NULL,
 	"email" varchar(255) NOT NULL,
 	"phone_number" varchar(255),
 	CONSTRAINT "customer_pk" PRIMARY KEY ("id")
