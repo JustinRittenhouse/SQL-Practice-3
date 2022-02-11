@@ -31,6 +31,10 @@ values
 --values 
 --(datediff(year(customer.birthday),getdate())
 
+-- After consulting Lucas, he explained how it was better to just create the age when needed.
+alter table "customer"
+drop column "age";
+
 insert into "ticket" ("movie_id", "start_time", "customer_id")
 values 
 (1, '6:30', 4),
@@ -39,6 +43,7 @@ values
 (2, '20:00', 2),
 (2, '20:00', 3);
 
+-- It would be nice to see when each purchase was made, too.
 alter table "payment"
 add "time" time;
 
@@ -50,6 +55,7 @@ values
 (2, 1, 14, 13.00, current_timestamp),
 (3, 1, 15, 13.00, current_timestamp);
 
+-- Whoops. Want consistent names. Didn't catch this until now.
 alter table "payment" rename column "concessions_id" to "concession_id";
 
 insert into "payment" ("customer_id", "staff_id", "concession_id", "amount", "time")
